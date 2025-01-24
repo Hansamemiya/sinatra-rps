@@ -1,0 +1,22 @@
+<% # Define the possible choices %>
+<% choices = ["rock", "paper", "scissors"] %>
+
+<% # They play something random %>
+<% their_choice = choices.sample %>
+
+<% our_choice = "scissors" %>
+
+<% # Determine the outcome %>
+<% if our_choice == their_choice %>
+  <% result = "It's a tie!" %>
+<% elsif their_choice == "scissors" %>
+  <% result = "We won!" %>
+<% elsif their_choice == "paper" %>
+  <% result = "We lost!" %>
+<% end %>
+
+<p>We played scissors!</p>
+<p>They played <%= their_choice.capitalize %>!</p>
+<p><%= result %></p>
+
+<div><a href="/">Rules</a></div>
